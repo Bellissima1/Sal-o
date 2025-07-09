@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cabelíssima - Beleza Feminina</title>
+  <title><title>Cabelíssima | Produtos Capilares para Cabelos Lisos | Compre Online</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --rosa: #f8d7e3;
-      --branco: #ffffff;
-      --dourado: #d4af37;
-      --preto: #222222;
+      --fundo-escuro: #111111;
+  --cinza-escuro: #1a1a1a;
+  --dourado: #d4af37;
+  --branco: #ffffff;
+  --cinza-texto: #cccccc;
     }
 
     * {
@@ -21,13 +22,13 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--branco);
-      color: var(--preto);
+      background: var(--fundo-escuro);
+  color: var(--cinza-texto);
       line-height: 1.6;
     }
 
     header {
-      background: var(--preto);
+      background: var(--cinza-escuro);
       padding: 1rem;
       display: flex;
       justify-content: space-between;
@@ -73,7 +74,7 @@
 
     nav a {
       text-decoration: none;
-      color: var(--preto);
+      color: var(--branco);
       font-weight: 600;
     }
 
@@ -119,7 +120,7 @@
 
     /* Hero section com logo grande no fundo */
     .hero {
-      background: var(--rosa);
+      background: var(--cinza-escuro);
       text-align: center;
       padding: 4rem 2rem;
       position: relative;
@@ -136,7 +137,7 @@
       height: 100%;
       background: url('https://i.postimg.cc/8z2tMcnJ/istockphoto-1326571981-612x612.jpg') no-repeat center center;
       background-size: contain;
-      opacity: 0.1; /* opacidade suave */
+      opacity: 0.7; /* opacidade suave */
       z-index: 0;
       pointer-events: none;
     }
@@ -151,13 +152,13 @@
     .hero h1 {
       font-family: 'Dancing Script', cursive;
       font-size: 2.5rem;
-      color: var(--preto);
+      color: var(--branco);
     }
 
     .hero p {
       margin-top: 1rem;
       font-size: 1.1rem;
-      color: #333333;
+      color: var(--branco);
     }
 
     .hero button {
@@ -187,13 +188,13 @@
     }
 
     .produto {
-      border: 1px solid #eee;
+      border: 1px solid #333;
       border-radius: 10px;
       padding: 1rem;
       text-align: center;
       position: relative;
       transition: transform 0.3s ease;
-      background: #fff;
+      background: var(--cinza-escuro);
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
@@ -222,7 +223,7 @@
       margin-top: 0.5rem;
       padding: 0.8rem 2rem;
       background: var(--dourado);
-      color: white;
+      color: var(--preto);
       border: none;
       border-radius: 8px;
       font-weight: bold;
@@ -236,7 +237,7 @@
     }
 
     .sobre {
-      background: #fff9fc;
+      background: var(--cinza-escuro);
       padding: 2rem;
       text-align: center;
       max-width: 960px;
@@ -247,7 +248,7 @@
       font-family: 'Dancing Script', cursive;
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: var(--preto);
+      color: var(--dourado);
     }
 
     .estatisticas {
@@ -259,12 +260,12 @@
     }
 
     .estatisticas div {
-      background: var(--rosa);
+      background: var(--dourado);
       padding: 1rem 2rem;
       border-radius: 10px;
       min-width: 120px;
       font-weight: 600;
-      color: var(--preto);
+      color: var(--cinza-escuro);
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
@@ -394,7 +395,7 @@
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background: var(--rosa);
+      background: #000;
       font-size: 1rem;
       color: var(--preto);
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
@@ -600,9 +601,7 @@
     <p>© 2025 Cabelíssima. Todos os direitos reservados.</p>
     <p>
       Siga-nos no
-      <a href="https://instagram.com/cabelissima" target="_blank" rel="noopener noreferrer" aria-label="Instagram Cabelíssima">Instagram</a>
-      |
-      <a href="https://facebook.com/cabelissima" target="_blank" rel="noopener noreferrer" aria-label="Facebook Cabelíssima">Facebook</a>
+      <a href="https://www.instagram.com/cabellissimasalon?igsh=MXI2bDdwZ21meWx6Zw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Cabelíssima">Instagram</a>
     </p>
   </footer>
 
@@ -709,7 +708,7 @@
 
     // Fechar modal com ESC
     window.addEventListener('keydown', e => {
-      if (e.key === 'Esscape' && modal.style.display === 'flex') {
+      if (e.key === 'Escape' && modal.style.display === 'flex') {
         modal.style.display = 'none';
       }
     });
