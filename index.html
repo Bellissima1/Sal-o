@@ -558,6 +558,23 @@
       </p>
       <button class="comprar-btn" data-links="https://entrega.logzz.com.br/pay/memg6lqpg/1-mascara-karseell,https://entrega.logzz.com.br/pay/memg6lqpg/2-mascara-karseell-rmk,https://entrega.logzz.com.br/pay/memg6lqpg/3-mascara-karseell">Comprar</button>
     </div>
+    <div class="produto">
+      <img src="https://res.cloudinary.com/dymx2n64y/image/upload/v1752098884/images_25_jdtw7f.jpg" alt="Produto 5" />
+      <h4>Hidraliso - Alisante de Chuveiro</h4>
+      <p style="font-size: 16px;">
+        <span style="color: red; font-weight: bold; font-size: 20px;">R$ 147,00</span>
+      </p>
+      <button class="comprar-btn" data-links="https://app.monetizze.com.br/r/ACP25431994,https://app.monetizze.com.br/r/ACP25431994/?u=GF73019,https://app.monetizze.com.br/r/ACP25431994/?u=MG82376">Comprar</button>
+    </div>
+    <div class="produto">
+      <img src="https://res.cloudinary.com/dymx2n64y/image/upload/v1752099328/50c3b4737f3e97aeea31ce2e505f53f9_xoepxy.jpg" alt="Produto 6" />
+      <h4>Cabelo, Pele & Unhas - Lizz ante Nutri</h4>
+      <p style="font-size: 16px;">
+        <span style="color: gray; text-decoration: line-through;">R$ 197,00</span><br>
+        <span style="color: red; font-weight: bold; font-size: 20px;">R$ 127,00</span>
+      </p>
+      <button class="comprar-btn" data-links="https://app.monetizze.com.br/r/AFU25432198,https://app.monetizze.com.br/r/AFU25432198,https://app.monetizze.com.br/r/AFU25432198">Comprar</button>
+    </div>
   </section>
 
   <section class="depoimentos" id="depoimentos">
@@ -671,7 +688,7 @@
     let currentLinks = []; // para guardar os links de checkout do produto
 
     document.querySelectorAll('.comprar-btn').forEach(button => {
-      button.addEventListener('click', () => {
+    button.addEventListener('click', () => {
         // Recebe os links separados por vírgula (exemplo: "link1,link2,link3")
         currentLinks = button.dataset.links.split(',');
         selectQuantidade.value = "1"; // resetar seleção
@@ -715,3 +732,4 @@
   </script>
 </body>
 </html>
+   
