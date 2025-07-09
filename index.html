@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cabelíssima | Produtos Capilares para Cabelos Lisos | Compre Online</title>
+  <title><title>Cabelíssima | Produtos Capilares para Cabelos Lisos | Compre Online</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -138,7 +138,7 @@
       background: url('https://i.postimg.cc/8z2tMcnJ/istockphoto-1326571981-612x612.jpg') no-repeat center center;
       background-size: contain;
       opacity: 0.7; /* opacidade suave */
-      z-index: 1;
+      z-index: 0;
       pointer-events: none;
     }
 
@@ -518,8 +518,6 @@
       
     </button>
   </section>
-    
-  </section>
 
   <section class="vitrine" id="vitrine">
     <div class="produto">
@@ -559,8 +557,7 @@
         <span style="color: red; font-weight: bold; font-size: 20px;">R$ 145,00</span>
       </p>
       <button class="comprar-btn" data-links="https://entrega.logzz.com.br/pay/memg6lqpg/1-mascara-karseell,https://entrega.logzz.com.br/pay/memg6lqpg/2-mascara-karseell-rmk,https://entrega.logzz.com.br/pay/memg6lqpg/3-mascara-karseell">Comprar</button>
- </div>
-    
+    </div>
   </section>
 
   <section class="depoimentos" id="depoimentos">
@@ -710,4 +707,11 @@
     });
 
     // Fechar modal com ESC
-    window.addEventListene
+    window.addEventListener('keydown',e => {
+      if (e.key === 'Esscape' && modal.style.display === 'flex') {
+        modal.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
