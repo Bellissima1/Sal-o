@@ -138,7 +138,7 @@
       background: url('https://i.postimg.cc/8z2tMcnJ/istockphoto-1326571981-612x612.jpg') no-repeat center center;
       background-size: contain;
       opacity: 0.7; /* opacidade suave */
-      z-index: 0;
+      z-index: 1;
       pointer-events: none;
     }
 
@@ -186,6 +186,33 @@
       max-width: 960px;
       margin: 0 auto 3rem auto;
     }
+
+    .categorias {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem;
+  background: var(--fundo-escuro);
+  margin-bottom: 1rem;
+}
+
+.categoria-btn {
+  background: var(--cinza-escuro);
+  color: var(--texto);
+  border: 1px solid var(--dourado);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.categoria-btn:hover,
+.categoria-btn.ativo {
+  background: var(--dourado);
+  color: var(--fundo-escuro);
+}
 
     .produto {
       border: 1px solid #333;
@@ -519,8 +546,16 @@
     </button>
   </section>
 
+  <section class="categorias">
+  <button class="categoria-btn ativo" data-categoria="todos">Todos</button>
+  <button class="categoria-btn" data-categoria="Progressiva Vegetal (SEM FORMOL)">Progressivas</button>
+  <button class="categoria-btn" data-categoria="mascara">Máscaras</button>
+  <button class="categoria-btn" data-categoria="tonico">Tônicos</button>
+    
+  </section>
+
   <section class="vitrine" id="vitrine">
-    <div class="produto">
+    <div class="produto" data-categoria="Progressiva Vegetal (SEM FORMOL)">
       <span class="badge">Novo</span>
       <img src="https://i.postimg.cc/CxHJxtR9/Imagem-Progressiva-Fundo-Branco.png" alt="Produto 1" />
       <h4>Progressiva Vegetal (SEM FORMOL)</h4>
@@ -540,7 +575,7 @@
       </p>
       <button class="comprar-btn" data-links="https://entrega.logzz.com.br/pay/memdzdvoz/ohcky-1-unidade-escova-alisadora,https://entrega.logzz.com.br/pay/memdzdvoz/bcrdm-2-unidades-escova-alisadora,https://entrega.logzz.com.br/pay/memdzdvoz/yqkoo-3-unidades-escova-alisadora">Comprar</button>
     </div>
-    <div class="produto">
+    <div class="produto" data-categoria="tonico">
       <img src="https://i.postimg.cc/bNQRCnY8/Screenshot-2025-07-07-07-50-12-668-com-android-chrome-edit.jpg" alt="Produto 3" />
       <h4>Tônico Capilar</h4>
       <p style="font-size: 16px;">
@@ -549,7 +584,7 @@
       </p>
       <button class="comprar-btn" data-links="https://entrega.logzz.com.br/pay/mem5mkk6p/1-topspray,https://entrega.logzz.com.br/pay/mem5mkk6p/2-topspray,https://entrega.logzz.com.br/pay/mem5mkk6p/3-topspray">Comprar</button>
     </div>
-    <div class="produto">
+    <div class="produto" data-categoria="mascara">
       <img src="https://i.postimg.cc/SxRq58sd/Screenshot-2025-07-08-23-21-51-271-com-whatsapp-edit.jpg" alt="Produto 4" />
       <h4>Máscara Capilar Karseell</h4>
       <p style="font-size: 16px;">
@@ -557,7 +592,8 @@
         <span style="color: red; font-weight: bold; font-size: 20px;">R$ 145,00</span>
       </p>
       <button class="comprar-btn" data-links="https://entrega.logzz.com.br/pay/memg6lqpg/1-mascara-karseell,https://entrega.logzz.com.br/pay/memg6lqpg/2-mascara-karseell-rmk,https://entrega.logzz.com.br/pay/memg6lqpg/3-mascara-karseell">Comprar</button>
-    </div>
+ </div>
+    
   </section>
 
   <section class="depoimentos" id="depoimentos">
@@ -712,6 +748,27 @@
         modal.style.display = 'none';
       }
     });
+
+  const botoesCategoria = document.querySelectorAll('.categoria-btn');
+  const produtos = document.querySelectorAll('.produto');
+
+  botoesCategoria.forEach(botao => {
+    botao.addEventListener('click', () => {
+      // Atualar botão ativo
+      botoesCategoria.forEach(b => b.classList.remove('ativo'));
+      botao.classList.add('ativo');
+
+      const categoria = botao.getAttribute('data-categoria');
+
+      produtos.forEach(prod => {
+        if (categoria === 'todos' || prod.getAttribute('data-categoria') === categoria) {
+          prod.style.display = 'block';
+        } else {
+          prod.style.display = 'none';
+        }
+      });
+    });
+  });
   </script>
 </body>
 </html>
